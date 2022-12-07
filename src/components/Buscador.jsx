@@ -30,7 +30,7 @@ const Buscador = () => {
     setLoading(true)
     const respuesta =  await GetData(busqueda, pagina)
     //logica para determinar si mostramos los resultados o mensaje de NoResults
-    if (respuesta === undefined) {
+    if (respuesta == undefined) {
       setNoticias([])
     } else if (respuesta.totalResults === 0) {
         setNoDataMessage(true)
@@ -40,7 +40,7 @@ const Buscador = () => {
       setTotalPaginas(paginas)
       setCantidadNoticias(respuesta.totalResults)
     }
-    setLoading(false)
+      setLoading(false)
   }
   
   //console.log(busqueda);
